@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Shippori+Antique&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <script src = "javascript.js"></script>
 
 </head>
 
@@ -40,25 +41,111 @@
             <p>Knowing exactly where your income is going is important for proper financial management. This  website can help you manage your finances and expenses for your salary or the median salaries for many different careers. This website will provide you with your gross monthly income, the total net income with deductions subtracted, mortgage calculator as well as a checkbook. </p>
         </div>
         <div class = "planfinancesimage"></div>
+    </div>
 
+    <h2>Income Calculator</h2> 
 
+    <script src = "javascript.js"></script>
+    <div class = "incomecalculator-box">
+        <h2>Select A Career</h2>
 
-    <div class = "incomecalculator">
+        <select class = "selectacareer" id="selectacareer" placeholder = "Select A Career" onchange="getOption()">
+            <option>Select A Career</option>
+            <option value="Accountant" salary = "55,650">Accountant</option>
+            <option value="Advance Tractor / Trailer Driver" salary = "53,5500">Doctor</option>
+            <option value = "Agricultural Engineer" salary = "56,700">Agricultural Engineer</option>
+            <option value = "Architect" salary = "53,550">Architect</option>
+            <option value = "Auto Tech / Mechanic" salary = "49,350">Auto Tech / Mechanic</option>
+            <option value = "Aviation Tech. Mechanic" salary = "50,400">Aviation Tech. Mechanic</option>
+            <option value = "Biologist" salary = "54,600">Biologist</option>
+            <option value = "Bus Driver" salary = "37,800">Bus Driver</option>
+            <option value = "Business Development Officer" salary = "54,600">Business Development Officer</option>
+            <option value = "Business Manager" salary = "61,950">Business Manager</option>
+            <option value = "CNC Manufacturing" salary = "80,850">CNC Manufacturing</option>
+            <option value = "Carpenter" salary = "47,250">Carpenter</option>
+            <option value = "Chef" salary = "52,500">Chef</option>
+            <option value = "Chemist" salary = "56,700">Cehmist</option>
+            <option value = "Civil Engineering Technician" salary = "68,250">Civil Engineering Technician</option>
+            <option value = "Commerical Driver" salary = "51,450">Commerical Driver</option>
+            <option value = "Computer Technician" salary = "46,200">Computer Technician</option>
+            <option value = "conserv/environ/science" salary = "72,450">Conserv./Environ.Science</option>
+            <option value = "Correctional Officer" salary = "48,300">Correctional Officer</option>
+            <option value = "Cosmetologist" salary = "36,750">Cosmetologist</option>
+            <option value = "Credit Union / Bank Manager" salary = "61,950">Credit Union/ Bank Manager</option>
+            <option value = "Daycare Director" salary = "37,850">Daycare Director</option>
+            <option value = "Dentist" salary = "115,500">Dentist</option>
+            <option value = "Detective" salary = "60,900">Detective</option>
+            <option value = "Diesel Tech/Mechanic" salary = "55,650">Diesel Tech / Mechanic</option>
+            <option value = "Doctor/Physician" salary = "147,000">Doctor/Physician</option>
+            <option value = "Electrician" salary = "54,600">Electrician</option>
+            <option value = "Electronic Engineer" salary = "75,600">Electronic Engineer</option>
+            <option value = "EMT" salary = "34,650">EMT</option>
+            <option value = "Energy Management PG&E " salary = "106,050">Energy Management PG&E </option>
+            <option value = "Engineer" salary = "72,450">Engineer</option>
+            <option value = "Fashion Designer" salary = "63,000">Fashion Designer</option>
+            <option value = "Fire Fighter" salary = "49,350">Fire Fighter</option>
+            <option value = "Forest Ranger" salary = "52,500">Forest Ranger</option>
+            <option value = "Graphic/Media Designer" salary = "58,000">Graphic Media Designer</option>
+            <option value = "H/C HVAC" salary = "63,000">H/C HVAC</option>
+            <option value = "Highway Patrol" salary = "84,000">Highway Patrol</option>
+            <option value = "Home Inspector" salary = "56,700">Home Inspector</option>
+            <option value = "Industrial Mechanic" salary = "46,200">Industrial Mechanic</option>
+            <option value = "Interior Design" salary = "49,350">Interior Designer</option>
+            <option value = "Investment Analyst" salary = "66,150">Investment Analyst</option>
+            <option value = "Lab Technician" salary = "42,000">Lab Technician</option>
+            <option value = "Landscaper Horticulture" salary = "48,300">Landscaper Horticulture</option>
+            <option value = "Lawyer" salary = "86,100">Lawyer</option>
+            <option value = "Marketing/Sales Manager" salary = "58,800">Marketing/Sales Manager</option>
+            <option value = "Media/Communications" salary = "45,150">Media/Communications</option>
+            <option value = "Medical Repair Tech." salary = "52,500">Medical Repair Tech</option>
+            <option value = "Military" salary = "55,550">Military</option>
+            <option value = "Nurse" salary = "66,150">Nurse</option>
+            <option value = "Nutritionist" salary = "45,150">Nutritionist</option>
+            <option value = "Oceanographer" salary = "69,300">Oceanographer</option>
+            <option value = "Pastor" salary = "50,400">Pastor</option>
+            <option value = "PG&E\AT8&T Technician" salary = "78,750">PG&E\AT8&T Technician</option>
+            <option value = "Pharmacist" salary = "105,000">Pharmacist</option>
+            <option value = "Photographer" salary = "45,150">Photographer</option>
+            <option value = "Physical Therapist" salary = "72,450">Physical Therapist</option>
+            <option value = "Pilot(Commercial)" salary = "78,750">Pilot(Commercial)</option>
+            <option value = "Plumber" salary = "52,500">Plumber</option>
+            <option value = "Police Officer" salary = "53,550">Police Officer</option>
+            <option value = "Principal" salary = "93,450">Principal</option>
+            <option value = "Probation Officer" salary = "44,100">Probation Officer</option>
+            <option value = "Psychologist" salary = "77,700">Psychologist</option>
+            <option value = "Retail Sales Associate" salary = "34,650">Retail Sales Associate</option>
+            <option value = "Social Worker" salary = "50,400">Social Worekr</option>
+            <option value = "Solar Energy Tech" salary = "53,550">Solar Energy Tech</option>
+            <option value = "Teacher" salary = "52,500">Teacher</option>
+            <option value = "UPS/Fed Ex Driver" salary = "68,250">UPS/Fed Ex Driver</option>
+            <option value = "Veterinarian" salary = "82,950">Veterinarian</option>
+            <option value = "Welder/Metal Specialist" salary = "47,250">Welder/ Metal Specialist</option>
+            <option value = "Wind Energy Technician" salary = "56,700">Wind Energy Technician</option>
+            
+
+          </select>
+          
+    <div class = salarydisplay>
+        <h3>Salary:100,000</h3>
+    </div>
+    <div class = grossmonhtly>
+        <h3>Gross Monthly Income:100,000</h3>
+    </div>
+    <hr>
+    <h3>Pay Period Deductions</h3>
+   
+    <ul class = "payperioddeductions">
+        <li>Federal Taxes</li>
+        <li> State Taxes</li>
+        <li>Social Security</li>
+        <li>Medicare</li>
+        <li>State Disability</li>
+        <li>Retirement Investment</li>
+        <li>Medical Insurance</li>
+    </ul>
+    <hr>
 
     </div>
-</div>
-
-
-
-
 
 </body>
-
-
-
-
-
-
-
-
 </html>
