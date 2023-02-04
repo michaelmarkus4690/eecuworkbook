@@ -1,7 +1,10 @@
 // Select Career Option
 function getOption() {
-    console.log(document.getElementById('selectacareer').value);
-  }
+  let careerChoice = document.getElementById('selectacareer').value;
+  return careerChoice;
+  console.log(careerChoice)
+}
+
 
 
 // Gross Income
