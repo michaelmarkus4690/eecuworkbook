@@ -1,8 +1,12 @@
 // Select Career Option
 function getOption() {
-  let careerChoice = document.getElementById('selectacareer').value;
-  return careerChoice;
-  console.log(careerChoice)
+  let selectedOption = document.getElementById("selectacareer").value;
+  let selectedOptionElement = document.querySelector(`[value="${selectedOption}"]`);
+  let salary = selectedOptionElement.getAttribute("salary");
+  document.getElementById("salaryDisplay").innerHTML = "Salary:$" + salary;
+
+  let grossMonthlyIncome = Number(Number(salary) / 12)
+  console.log(grossMonthlyIncome);
 }
 
 
